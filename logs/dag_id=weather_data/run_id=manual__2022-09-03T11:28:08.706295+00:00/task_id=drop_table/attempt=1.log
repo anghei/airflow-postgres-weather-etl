@@ -1,0 +1,24 @@
+[2022-09-03T11:28:09.496+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: weather_data.drop_table manual__2022-09-03T11:28:08.706295+00:00 [queued]>
+[2022-09-03T11:28:09.505+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: weather_data.drop_table manual__2022-09-03T11:28:08.706295+00:00 [queued]>
+[2022-09-03T11:28:09.506+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-03T11:28:09.507+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2022-09-03T11:28:09.508+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-03T11:28:09.521+0000] {taskinstance.py:1389} INFO - Executing <Task(PostgresOperator): drop_table> on 2022-09-03 11:28:08.706295+00:00
+[2022-09-03T11:28:09.531+0000] {standard_task_runner.py:52} INFO - Started process 10107 to run task
+[2022-09-03T11:28:09.536+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'weather_data', 'drop_table', 'manual__2022-09-03T11:28:08.706295+00:00', '--job-id', '171', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpcxx8cou6', '--error-file', '/tmp/tmpxtbxyzz4']
+[2022-09-03T11:28:09.546+0000] {standard_task_runner.py:80} INFO - Job 171: Subtask drop_table
+[2022-09-03T11:28:09.629+0000] {task_command.py:371} INFO - Running <TaskInstance: weather_data.drop_table manual__2022-09-03T11:28:08.706295+00:00 [running]> on host 3d56073112d8
+[2022-09-03T11:28:09.687+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weather_data
+AIRFLOW_CTX_TASK_ID=drop_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-03T11:28:08.706295+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-03T11:28:08.706295+00:00
+[2022-09-03T11:28:09.695+0000] {base.py:68} INFO - Using connection ID 'postgres_default' for task execution.
+[2022-09-03T11:28:09.698+0000] {sql.py:315} INFO - Running statement: drop table if exists weather, parameters: None
+[2022-09-03T11:28:09.713+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=weather_data, task_id=drop_table, execution_date=20220903T112808, start_date=20220903T112809, end_date=20220903T112809
+[2022-09-03T11:28:09.756+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-03T11:28:09.782+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,49 @@
+[2022-09-03T13:00:17.232+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: weather_data.insert_weather_krd scheduled__2022-09-03T12:00:00+00:00 [queued]>
+[2022-09-03T13:00:17.238+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: weather_data.insert_weather_krd scheduled__2022-09-03T12:00:00+00:00 [queued]>
+[2022-09-03T13:00:17.239+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-03T13:00:17.240+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2022-09-03T13:00:17.241+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-03T13:00:17.249+0000] {taskinstance.py:1389} INFO - Executing <Task(PostgresOperator): insert_weather_krd> on 2022-09-03 12:00:00+00:00
+[2022-09-03T13:00:17.253+0000] {standard_task_runner.py:52} INFO - Started process 98 to run task
+[2022-09-03T13:00:17.256+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'weather_data', 'insert_weather_krd', 'scheduled__2022-09-03T12:00:00+00:00', '--job-id', '266', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp50yjq98r', '--error-file', '/tmp/tmpiu0079i7']
+[2022-09-03T13:00:17.257+0000] {standard_task_runner.py:80} INFO - Job 266: Subtask insert_weather_krd
+[2022-09-03T13:00:17.297+0000] {task_command.py:371} INFO - Running <TaskInstance: weather_data.insert_weather_krd scheduled__2022-09-03T12:00:00+00:00 [running]> on host f432245fdbd9
+[2022-09-03T13:00:17.387+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weather_data
+AIRFLOW_CTX_TASK_ID=insert_weather_krd
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-03T12:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-03T12:00:00+00:00
+[2022-09-03T13:00:17.395+0000] {base.py:68} INFO - Using connection ID 'postgres_default' for task execution.
+[2022-09-03T13:00:17.398+0000] {sql.py:315} INFO - Running statement: insert into weather(
+                name,
+                temp,
+                temp_feels_like,
+                temp_min,
+                temp_max,
+                description,
+                wind_speed,
+                humidity,
+                pressure,
+                sunset,
+                sunrise
+            ) values (
+                'Краснодар',
+                33.89,
+                34.3,
+                31.03,
+                33.89,
+                'ясно',
+                3,
+                36,
+                1008,
+                1662220756,
+                1662173291
+            ), parameters: None
+[2022-09-03T13:00:17.401+0000] {sql.py:324} INFO - Rows affected: 1
+[2022-09-03T13:00:17.410+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=weather_data, task_id=insert_weather_krd, execution_date=20220903T120000, start_date=20220903T130017, end_date=20220903T130017
+[2022-09-03T13:00:17.428+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-03T13:00:17.454+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

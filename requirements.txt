@@ -1,0 +1,4 @@
+python-dotenv
+apache-airflow-providers-telegram
+apache-airflow-providers-postgres
+pytelegrambotapi==3.7.7

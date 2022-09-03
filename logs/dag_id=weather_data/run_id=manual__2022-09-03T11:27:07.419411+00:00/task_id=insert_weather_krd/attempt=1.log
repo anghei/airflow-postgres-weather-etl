@@ -1,0 +1,40 @@
+[2022-09-03T11:27:13.627+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: weather_data.insert_weather_krd manual__2022-09-03T11:27:07.419411+00:00 [queued]>
+[2022-09-03T11:27:13.633+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: weather_data.insert_weather_krd manual__2022-09-03T11:27:07.419411+00:00 [queued]>
+[2022-09-03T11:27:13.634+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-03T11:27:13.635+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2022-09-03T11:27:13.636+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-03T11:27:13.644+0000] {taskinstance.py:1389} INFO - Executing <Task(PostgresOperator): insert_weather_krd> on 2022-09-03 11:27:07.419411+00:00
+[2022-09-03T11:27:13.648+0000] {standard_task_runner.py:52} INFO - Started process 10054 to run task
+[2022-09-03T11:27:13.651+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'weather_data', 'insert_weather_krd', 'manual__2022-09-03T11:27:07.419411+00:00', '--job-id', '170', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp2rpy5bsf', '--error-file', '/tmp/tmpe5lqfkt6']
+[2022-09-03T11:27:13.652+0000] {standard_task_runner.py:80} INFO - Job 170: Subtask insert_weather_krd
+[2022-09-03T11:27:13.695+0000] {task_command.py:371} INFO - Running <TaskInstance: weather_data.insert_weather_krd manual__2022-09-03T11:27:07.419411+00:00 [running]> on host 3d56073112d8
+[2022-09-03T11:27:13.715+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1463, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1567, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2225, in render_templates
+    rendered_task = self.task.render_template_fields(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1188, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 347, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 386, in render_template
+    template = jinja_env.from_string(value)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1105, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 12, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'check_weather_krd'
+[2022-09-03T11:27:13.723+0000] {taskinstance.py:1412} INFO - Marking task as FAILED. dag_id=weather_data, task_id=insert_weather_krd, execution_date=20220903T112707, start_date=20220903T112713, end_date=20220903T112713
+[2022-09-03T11:27:13.730+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 170 for task insert_weather_krd (expected token 'end of print statement', got 'check_weather_krd'; 10054)
+[2022-09-03T11:27:13.743+0000] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-09-03T11:27:13.764+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

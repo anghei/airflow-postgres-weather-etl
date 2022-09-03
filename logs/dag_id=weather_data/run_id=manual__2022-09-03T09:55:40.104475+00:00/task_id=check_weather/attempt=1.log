@@ -1,0 +1,23 @@
+[2022-09-03T09:55:42.584+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: weather_data.check_weather manual__2022-09-03T09:55:40.104475+00:00 [queued]>
+[2022-09-03T09:55:42.592+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: weather_data.check_weather manual__2022-09-03T09:55:40.104475+00:00 [queued]>
+[2022-09-03T09:55:42.593+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-03T09:55:42.594+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2022-09-03T09:55:42.595+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-03T09:55:42.603+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): check_weather> on 2022-09-03 09:55:40.104475+00:00
+[2022-09-03T09:55:42.608+0000] {standard_task_runner.py:52} INFO - Started process 5311 to run task
+[2022-09-03T09:55:42.611+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'weather_data', 'check_weather', 'manual__2022-09-03T09:55:40.104475+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpfz0mu5ve', '--error-file', '/tmp/tmpr6qj3eu8']
+[2022-09-03T09:55:42.613+0000] {standard_task_runner.py:80} INFO - Job 95: Subtask check_weather
+[2022-09-03T09:55:42.656+0000] {task_command.py:371} INFO - Running <TaskInstance: weather_data.check_weather manual__2022-09-03T09:55:40.104475+00:00 [running]> on host 3d56073112d8
+[2022-09-03T09:55:42.706+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weather_data
+AIRFLOW_CTX_TASK_ID=check_weather
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-03T09:55:40.104475+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-03T09:55:40.104475+00:00
+[2022-09-03T09:55:42.775+0000] {python.py:173} INFO - Done. Returned value was: {'type': 2, 'id': 197864, 'country': 'RU', 'sunrise': 1662173958, 'sunset': 1662224402}
+[2022-09-03T09:55:42.793+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=weather_data, task_id=check_weather, execution_date=20220903T095540, start_date=20220903T095542, end_date=20220903T095542
+[2022-09-03T09:55:42.824+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-03T09:55:42.844+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,28 @@
+[2022-09-03T09:22:51.184+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: weather_data.greeting manual__2022-09-03T09:22:50.087952+00:00 [queued]>
+[2022-09-03T09:22:51.191+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: weather_data.greeting manual__2022-09-03T09:22:50.087952+00:00 [queued]>
+[2022-09-03T09:22:51.192+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-03T09:22:51.193+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2022-09-03T09:22:51.194+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-03T09:22:51.201+0000] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): greeting> on 2022-09-03 09:22:50.087952+00:00
+[2022-09-03T09:22:51.206+0000] {standard_task_runner.py:52} INFO - Started process 3565 to run task
+[2022-09-03T09:22:51.209+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'weather_data', 'greeting', 'manual__2022-09-03T09:22:50.087952+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpykxwsded', '--error-file', '/tmp/tmpx6ef36ch']
+[2022-09-03T09:22:51.210+0000] {standard_task_runner.py:80} INFO - Job 48: Subtask greeting
+[2022-09-03T09:22:51.251+0000] {task_command.py:371} INFO - Running <TaskInstance: weather_data.greeting manual__2022-09-03T09:22:50.087952+00:00 [running]> on host 3d56073112d8
+[2022-09-03T09:22:51.294+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weather_data
+AIRFLOW_CTX_TASK_ID=greeting
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-03T09:22:50.087952+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-03T09:22:50.087952+00:00
+[2022-09-03T09:22:51.296+0000] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-09-03T09:22:51.297+0000] {subprocess.py:74} INFO - Running command: ['/bin/bash', '-c', 'echo Hello']
+[2022-09-03T09:22:51.306+0000] {subprocess.py:85} INFO - Output:
+[2022-09-03T09:22:51.314+0000] {subprocess.py:92} INFO - Hello
+[2022-09-03T09:22:51.315+0000] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-09-03T09:22:51.341+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=weather_data, task_id=greeting, execution_date=20220903T092250, start_date=20220903T092251, end_date=20220903T092251
+[2022-09-03T09:22:51.382+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-03T09:22:51.408+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check
